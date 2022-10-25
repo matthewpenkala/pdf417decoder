@@ -169,6 +169,11 @@ class PDF417Decoder:
         
         return self.binary_data_to_string(self.barcodes_info[index].barcode_data)
 
+    def barcode_byte_data(self, index: int) -> str:
+
+        return self.barcodes_info[index].barcode_data
+
+
     def binary_data_to_string(self, barcode_binary_data: bytearray, iso_standard: str = "ISO-8859-1") -> str:
         """Convert binary data array to text string
 
